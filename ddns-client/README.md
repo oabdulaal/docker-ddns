@@ -12,4 +12,4 @@ felouka0.FQDN.com
 2. Copy `ddns-client.service` to `/etc/systemd/system/ddns-client.service`
 3. sudo chmod 644 /etc/systemd/system/ddns-client.service
 4. sudo systemctl daemon-reload
-5. sudo service ddns-service start
+5. sudo service ddns-client start
