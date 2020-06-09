@@ -11,5 +11,5 @@ felouka0.FQDN.com
 1. Copy `ddns-client.sh` to `/opt/ddns-client.sh`
 2. Copy `ddns-client.service` to `/etc/systemd/system/ddns-client.service`
 3. sudo chmod 644 /etc/systemd/system/ddns-client.service
-4. sudo systemctl enable ddns-client
-5. sudo systemctl daemon-reload
+4. sudo systemctl daemon-reload
+5. sudo service ddns-service start
