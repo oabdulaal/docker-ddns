@@ -1,0 +1,11 @@
+[Unit]
+Description=Omar's DynamicDNS Client
+
+[Service]
+ExecStart=/bin/bash /opt/ddns-client.sh
+ExecReload=/bin/bash /opt/ddns-client.sh
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
+Alias=ddns-client.service
