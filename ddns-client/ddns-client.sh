@@ -13,7 +13,9 @@ do
         if [ "$OLDIP" != "$CURRENTIP" ];
         then
                 curl -s -o - "http://${DDNS}/update?secret=${DDNS_SECRET}&domain=${HOSTNAME}&addr=${CURRENTIP}"
-                echo "$CURRENTIP" > $CURRIP_FILE
+                if [ 0 -eq $? ]; then
+                        echo "$CURRENTIP" > $CURRIP_FILE
+                fi
         fi
         sleep 120
         CURRENTIP=$(hostname -I | awk '{print $1}')
